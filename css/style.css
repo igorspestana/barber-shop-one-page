@@ -1,0 +1,462 @@
+:root {
+    --color-primary: #917758;
+    --color-primary-light: #F5eee6;
+    --color-secondary: #3c2915;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    /* background-color: red; */
+    width: 1170px; /* considerando telas de 1200px */
+    margin: 0 auto; /* centralizar a div */
+}
+
+/*************
+*   HOME
+*************/
+
+.home {
+    background: url(../images/bg-home.jpg);
+    background-size:  cover; /* ajusta o background cobrindo */
+    height: 100vh; /* viewport height */
+    position: relative;
+    background-attachment: fixed; /* efeito paralax */
+}
+ 
+.home .header{
+    padding: 30px 0;
+}
+
+.home .header .nav {
+    display: flex;
+    justify-content: center;
+}
+
+
+.home .header .nav ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.home .header .nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+
+.home .header .nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.home .header .nav ul li a:hover {
+    border-bottom: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.home .header .logo {
+    margin: 0 30px;
+}
+
+
+/*******************
+*   HOME - BANNER
+********************/
+
+.home .banner {
+    text-align: center;
+    color:white;
+    position: absolute; /* posição associada ao section */
+    /* técnica para posicionar o elemento na tela de forma responsiva */
+    top: 50%;
+    left: 50%;
+    top: 50%;
+    left: 50%;
+    height: 270px;
+    width: 760px;
+    margin-top: -75px;
+    margin-left: -380px;
+}
+
+.home .banner span {
+    display: block;
+}
+
+.home .banner .slogan1 {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.home .banner h1 {
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.home .banner .slogan2 {
+   margin-bottom: 15px;
+}
+
+/*******************
+*   HOME - ABOUT
+********************/
+
+.about {
+    background-color: var(--color-primary);
+}
+
+.about .container {
+    display: flex;
+}
+
+.about .container .timing {
+    width: 34%;
+    background: url(../images/brush-big.jpg);
+    text-align: center;
+    padding: 20px;
+    /* para subir o elemento e aparecer sobre */
+    position: relative;
+    top: -50px;
+}
+
+.about .container .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+}
+
+.about .container .overlay .classic-cut {
+    width: 50px;
+}
+
+.about .container .timing .overlay h3 {
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+    font-size: 32px;
+    width: fit-content; /* alinhar a borda ao tamanho do texto */
+    margin: 0 auto 40px auto; /* centralizar o texto */
+}
+
+.about .container .timing .overlay .text {
+    margin: 10px 0 10px 0;
+
+}
+
+.about .container .timing .overlay .text:after {
+    content: "•";
+    display: block;
+    color: white;
+    font-size: 32px;
+    margin: 10px 0 0;
+
+}
+
+.about .container .timing .overlay .text:last-of-type:after {
+    content: "|";
+    margin-bottom: 40px;
+}
+
+.about .container .timing .overlay h4 {
+    color: grey;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.about .container .timing .overlay span {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    display: block;
+}
+
+.about .container .timing .overlay .loc-ic {
+    width: 20px;
+    margin: 0 0 5px;
+}
+
+.about .container .timing .overlay .phone-ic {
+    width: 30px;
+    margin: 20px 0 5px;
+}
+
+.about .container .experience {
+    width: 66%;
+    margin: 100px 0 0 7%;
+    color: white;
+}
+
+.about .container .experience h2 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.about .container .experience h2:after {
+    display: block;
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.about .container .experience .text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .container .experience p {
+    margin-bottom: 20px;
+}
+
+/*******************
+*   SERVICES
+********************/
+
+.services {
+    background-color: var(--color-primary-light);
+}
+
+.services .container {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.services .container h2 {
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--color-secundary);
+    margin-bottom: 20px;
+}
+
+.services .container .boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.services .container .boxes .box  {
+    border: 3px solid var(--color-primary);
+    margin: 30px;
+    padding: 30px;
+}
+
+.services .container .boxes .box .box-ic {
+    margin-bottom: 20px;
+}
+
+.services .container .boxes .box h4 {
+    color: var(--color-secondary);
+}
+
+.services .container .boxes .box .head-line-ic {
+    margin-bottom: 20px;
+}
+
+.services .container .boxes .box p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+/*******************
+*   APPOINTMENT
+********************/
+
+.appointment {
+    background-color: var(--color-primary);
+    background-image: url(../images/chair-ic.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 300px;
+}
+
+.appointment .container {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.appointment .container h2 {
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--color-primary-light);
+    margin-bottom: 20px;
+}
+
+.appointment .container form .personal-data {
+    justify-content: space-between;
+    margin: 40px 0 20px;
+    display: flex;
+}
+
+.appointment .container form .personal-data .input-wrapper,
+.appointment .container form .input-wrapper {
+    width: 100%;
+    margin-right: 50px;
+}
+
+.appointment .container form .personal-data .input-wrapper:last-of-type {
+    margin-right: 0px;
+}
+
+.appointment .container form .personal-data .input-wrapper label,
+.appointment .container form .input-wrapper label {
+    display: block;
+    text-align: start;
+    color: var(--color-primary-light);
+    font-size: 12px;
+}
+
+.appointment .container .personal-data .input-wrapper input, 
+.appointment .container .personal-data .input-wrapper select,
+.appointment .container .input-wrapper textarea {
+    background-color: var(--color-primary-light);
+    border-radius: 3px;
+    border-style: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.appointment .container .input-wrapper textarea {
+    height: 100px;
+}
+
+.appointment .container button {
+    display: flex;
+    background-color: #3c2915;
+    color: var(--color-primary-light);
+    border-style: none;
+    padding: 10px 30px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*******************
+*   GALLERY
+********************/
+
+.gallery {
+    background-color: var(--color-primary-light);
+}
+
+.gallery .container {
+    text-align: center;
+    padding: 100px 0 100px 0;
+}
+
+.gallery .container h2 {
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.gallery .container .gallery-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 900px;
+    margin: 50px auto;
+
+}
+
+.gallery .container .gallery-wrapper div {
+    border: 20px solid var(--color-primary);
+    width: 33%;
+    margin: 6px;
+}
+
+.gallery .container .gallery-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+/*******************
+*   LOCATION
+********************/
+
+.location {
+    height: 100vh;
+    background-image: url(../images/bg-location.jpg);
+    background-size: cover;
+}
+
+.location .container {
+    padding: 100px 0;
+}
+
+.location .head {
+    background-color: #191919;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    color: var(--color-primary-light);
+}
+
+.location .head .info {
+    display: flex;
+    align-items: center;
+}
+
+.location .head .info .icon {
+   /* tudo pra inserir uma borda redonda com a imagem no meio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    
+    border: 1px solid var(--color-primary);
+    border-radius: 100%;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.location .head .info .text span {
+    display: block;
+    color: silver;
+}
+
+.location .head .info .text span:last-of-type {
+    font-weight: 400;
+    color: white;
+}
+
+.location .container .map {
+    width: 100%;
+}
+
+.location .container iframe {
+    width: 100%;
+}
+
+/*******************
+*   FOOTER
+********************/
+
+.footer {
+    background-color: #191919;
+    padding: 30px;
+    text-align: center;
+    color: #F5eee6;
+    font-size: 12px;
+}
